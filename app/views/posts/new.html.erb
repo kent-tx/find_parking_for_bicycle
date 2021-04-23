@@ -1,0 +1,14 @@
+<%= form_with model: @post do |f| %>
+  <%= f.label :where %>
+  <%= f.text_field :where %>
+  <%= f.label :explanation %>
+  <%= f.text_field :explanation %>
+  <%= f.label :price %>
+  <%= f.text_field :price %>
+  <%= f.label :station %>
+  <%= f.text_field :station %>
+  <%= f.fields_for :photos do |i| %>
+    <%= i.file_field :image %>
+  <% end %>
+  <%= f.submit "投稿",class: "btn btn-primary" %>
+<% end %>
