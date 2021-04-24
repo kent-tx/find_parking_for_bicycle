@@ -1,1 +1,26 @@
-<p>a</p>
+<h1 class="text-center my-5 border-bottom" > 投稿一覧<%= @posts.count %></h1>
+<% @posts.each do |post| %>
+  <div class="card text-center  mx-center mx-auto col-md-6 my-5">
+    <div class="card-body ">
+      <%= image_tag post.photos.first.image.url(:medium) %>
+      <div class="border-top text-center">
+        <p>所在地 : <%= post.where %></p>
+        <p>最寄駅<i class="fas fa-train"></i> : <%= post.station %></p>
+        <p>料金<i class="fas fa-yen-sign"></i> : <%= post.price %></p>
+      </div>
+      <div class="border-top pt-3">
+        <%= link_to "#" do %>
+          <i class="far fa-thumbs-up mr-3"></i>
+        <% end %>
+        
+        <%= link_to "#" do %>
+          <i class="far fa-comment mr-3"></i>
+        <% end %>
+        
+      </div>
+    </div>
+    
+  </div>
+    
+  
+<% end %>
