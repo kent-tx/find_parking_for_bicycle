@@ -1,4 +1,4 @@
 $('#good-icon-post-<%= @post.id.to_s %>').
-  html('<%= link_to  post_goods_path(@post), method: :POST, remote: true do %><i class="fas fa-thumbs-up"></i><% end %>');
+  html('<%= link_to  post_goods_path(@post), method: :POST, remote: true do %><i class="far fa-thumbs-up"></i><% end %>');
 $('#good-text-post-<%= @post.id.to_s %>').
   html('<%= j render "posts/good_text", { goods: @post.goods } %>');
