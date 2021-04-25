@@ -1,0 +1,17 @@
+<strong>
+  <% goods.each.with_index do |good, index| %>
+    <% if goods.size == 1 %>
+      <%= good.user.name %> </strong> が「いいね！」しました
+    <% elsif good == goods.last %>
+      </strong>and<strong>
+      <%= + good.user.name %></strong> が「いいね！」しました
+    <% elsif index > 1 %>
+      </strong><%= "and " + (goods.size-index).to_s + " 他 " %> が「いいね！」しました
+      <% break %>
+    <% elsif index == goods.size-2 || index == 1 %>
+      <%= good.user.name %>
+    <% else %>
+      <%= good.user.name + ", " %>
+    <% end %>
+  <% end %>
+</strong>

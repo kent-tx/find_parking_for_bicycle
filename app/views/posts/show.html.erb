@@ -19,13 +19,48 @@
       </tbody>
     </table>
     <% if @post.explanation.present? %>
-      <h5><strong>説明</strong></h5>
-      <%= @post.explanation %>
+      <h5 class="border-bottom pb-3"><strong>説明</strong></h5>
+      <div class="border-bottom pb-5">
+        <%= @post.explanation %>
+      </div>
+      
     <% end %>
-    <div class="text-left">
-      <%= link_to  "/posts/" do %>
-      <i class="fas fa-angle-double-left"></i>投稿一覧に戻る
-      <% end %>
+    <div class="border-top pt-3 row">
+      <div class="col-6" id="good-icon-post-<%= @post.id.to_s %>">
+        <% if @post.good_by(current_user).present? %>
+          <%= link_to  post_good_path(@post.id, @post.good_by(current_user)), method: :DELETE, remote: true do %>
+            i class="far fa-thumbs-up"></i>
+          <% end %>
+        <% else %>
+          <%= link_to  post_goods_path(@post), method: :POST, remote: true do %> 
+            <i class="fas fa-thumbs-up"></i>
+          <% end %>
+        <% end %>
+      </div>    
+      <div class="col-6">       
+        <%= link_to "#" do %>
+          <i class="far fa-comment mr-3 "></i>
+        <% end %>
+      </div>
+    </div>
+    <div id="good-text-post-<%= @post.id.to_s %>">
+        <%= render "good_text", { goods: @post.goods } %>
+    </div>
+    
+
+    <div class="row my-2 ">
+      <div class="col">
+        <%= link_to  posts_path(@post) do %>
+          <i class="fas fa-angle-double-left"></i>投稿一覧に戻る
+        <% end %>
+      </div>
+      <div class="col">
+        <% if @post.user_id == current_user.id %>
+          <%= link_to post_path(@post), method: :delete do %>
+            <i class="fas fa-trash-alt"></i> 投稿を削除する
+          <% end %>
+        <% end %>
+      </div>
     </div>
   </div>
   
