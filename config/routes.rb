@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users,
     controllers: { registrations: 'registrations' }
-  root "pages#home"
+  root  "pages#home"
+  get "pages/about"
 
   get '/users/:id',to: 'users#show',as: 'user'
 
