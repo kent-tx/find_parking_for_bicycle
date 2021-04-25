@@ -4,4 +4,8 @@ class Post < ApplicationRecord
   has_many :photos, dependent: :destroy
 
   accepts_nested_attributes_for :photos
+
+  validates :where,presence: true
+  validates :price,presence: true
+  validates :station,presence: true
 end

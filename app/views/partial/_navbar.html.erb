@@ -11,28 +11,33 @@
     </ul>
     <ul class=" nav navbar-nav ">
         <% if current_user %>
-        <li class=" nav-item ">
-        <%= link_to  user_path(current_user), class: "nav-link " do %>
-            <i class="fas fa-user-circle fa-lg"></i> プロフィール
-        <% end %>
-        </li>
-        <li class=" nav-item ">
-        <%= link_to  destroy_user_session_path,method: :delete, class: "nav-link " do %>
-            <i class="fas fa-sign-out-alt fa-lg"></i></i> ログアウト
-        <% end %>
-        </li>
+            <li class=" nav-item ">
+                <%= link_to  new_post_path, class: "nav-link " do %>
+                    <i class="fas fa-edit fa-lg"></i> 新規投稿
+                <% end %>
+            </li>
+            <li class=" nav-item ">
+                <%= link_to  user_path(current_user), class: "nav-link " do %>
+                    <i class="fas fa-user-circle fa-lg"></i> プロフィール
+                <% end %>
+            </li>
+            <li class=" nav-item ">
+                <%= link_to  destroy_user_session_path,method: :delete, class: "nav-link " do %>
+                    <i class="fas fa-sign-out-alt fa-lg"></i></i> ログアウト
+                <% end %>
+            </li>
         <% else %>
-        <li class=" nav-item ">
-        <%= link_to  new_user_registration_path, class: "nav-link " do %>
-            <i class="fas fa-user fa-lg"></i> 新規登録
+            <li class=" nav-item ">
+                <%= link_to  new_user_registration_path, class: "nav-link " do %>
+                    <i class="fas fa-user fa-lg"></i> 新規登録
+                <% end %>
+            </li>
+            <li class="nav-item ">
+                <%= link_to  new_user_session_path, class: "nav-link " do %>
+                    <i class="fas fa-sign-in-alt fa-lg"></i></i> ログイン
+                <% end %>
+            </li>
         <% end %>
-        </li>
-        <li class="nav-item ">
-        <%= link_to  new_user_session_path, class: "nav-link " do %>
-            <i class="fas fa-sign-in-alt fa-lg"></i></i> ログイン
-        <% end %>
-       </li>
-       <% end %>
     </ul>
   </div>
 </nav>
