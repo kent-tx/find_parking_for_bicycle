@@ -2,19 +2,33 @@
 <% @posts.each do |post| %>
   <div class="card text-center  mx-center mx-auto col-md-6 my-5">
     <div class="card-body ">
-      <%= image_tag post.photos.first.image.url(:medium) %>
-      <div class="border-top text-center">
-        <p>所在地 : <%= post.where %></p>
-        <p>最寄駅<i class="fas fa-train"></i> : <%= post.station %></p>
-        <p>料金<i class="fas fa-yen-sign"></i> : <%= post.price %></p>
-      </div>
+      <%= link_to post_path(post) do %>
+        <%= image_tag post.photos.first.image.url(:medium) %>
+      <% end %>
+      <table class="table justify-content-center">
+      <tbody>
+        <tr>
+          <th scope="row">所在地</th>
+            <td><%= post.where %></td>
+        </tr>
+        <tr>
+          <th scope="row">最寄駅</th>
+          <td><%= post.station %></td>
+        </tr>
+        <tr>
+          <th scope="row">料金</th>
+          <td><%= post.price %></td>
+        </tr>
+        
+      </tbody>
+    </table>
       <div class="border-top pt-3">
         <%= link_to "#" do %>
-          <i class="far fa-thumbs-up mr-3"></i>
+          <i class="far fa-thumbs-up mr-3 "></i>
         <% end %>
         
         <%= link_to "#" do %>
-          <i class="far fa-comment mr-3"></i>
+          <i class="far fa-comment mr-3 "></i>
         <% end %>
         
       </div>
