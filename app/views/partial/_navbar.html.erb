@@ -1,11 +1,11 @@
 <nav class="navbar navbar-expand-lg navbar-light header">
     <% if user_signed_in? %>
         <%= link_to posts_path,class:"navbar-brand" do %>
-            チャリンコ<i class="fas fa-parking"></i>
+            Find Parking for Bicycle
         <% end %>
     <% else %>
         <%= link_to root_path,class:"navbar-brand" do %>
-            チャリンコ<i class="fas fa-parking"></i>
+            Find Parking for Bicycle
         <% end %>
     <% end %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,7 +14,7 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <ul class="nav navbar-nav mr-auto  ">
         <li class="nav-item ">
-            <%= link_to pages_about_path,class:"nav-link" do %>チャリンコ<i class="fas fa-parking"></i>とは
+            <%= link_to pages_about_path,class:"nav-link" do %>Find Parking for Bicycleとは
             <% end %>
         </li>
     </ul>
