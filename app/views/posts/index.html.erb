@@ -1,3 +1,6 @@
+<div class="text-center mt-5">
+  <%= link_to "新規投稿する",new_post_path,class:"btn btn-success" %>
+</div>
 <h1 class="text-center my-5 border-bottom w-auto" > 投稿一覧(<%= @posts.count %>)</h1>
 <% @posts.each do |post| %>
   <div class="card text-center  mx-center mx-auto col-md-6 my-5">
