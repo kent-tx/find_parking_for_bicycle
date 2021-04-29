@@ -14,4 +14,7 @@ Rails.application.routes.draw do
     resources :goods,only: %i(create destroy)
     resources :comments,only: %i(create destroy)
   end
+
+  get 'maps/index'
+  resources :maps, only: [:index]
 end
