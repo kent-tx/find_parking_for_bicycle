@@ -1,7 +1,7 @@
-<h1 class="text-center my-5 border-bottom" > 投稿一覧(<%= @posts.count %>)</h1>
+<h1 class="text-center my-5 border-bottom w-auto" > 投稿一覧(<%= @posts.count %>)</h1>
 <% @posts.each do |post| %>
   <div class="card text-center  mx-center mx-auto col-md-6 my-5">
-    <div class="card-body ">
+    <div class="card-body w-auto">
       <%= link_to post_path(post) do %>
         <%= image_tag post.photos.first.image.url(:medium) %>
       <% end %>
@@ -61,3 +61,4 @@
     
   
 <% end %>
+

@@ -1,5 +1,6 @@
 <div class="card text-center  mx-center mx-auto col-md-6 my-5">
   <div class="card-body">
+    <div class="test"></div>
     <%= image_tag @post.photos.first.image.url(:medium) %>
     <table class="table justify-content-center">
       <tbody>
@@ -75,3 +76,24 @@
   </div>
   
 </div>
+
+<script>
+$(function() {
+  let $comment = $(".fa-comment");
+
+  $comment.hover(
+    function(){
+      $comment.css("cursor","pointer")
+  },
+    function(){
+      $comment.css("cursor","default")
+    }
+  );
+
+  $comment.click(function(){
+    $(".comment-input").focus();
+  });
+
+
+});
+</script>
