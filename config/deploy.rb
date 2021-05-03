@@ -1,8 +1,8 @@
 # capistranoのバージョン固定
-lock '3.4.0'
+lock '3.16.0'
 
 # デプロイするアプリケーション名
-set :application, 'find_parking_for_bycicle'
+set :application, 'find_parking_for_bicycle'
 
 # cloneするgitのレポジトリ
 set :repo_url, 'git@github.com:kent-tx/find_parking_for_bicycle.git'
