@@ -63,3 +63,4 @@ gem "mini_magick"
 gem 'pg', group: :production
 
 gem 'dotenv-rails'
+gem 'kaminari'
