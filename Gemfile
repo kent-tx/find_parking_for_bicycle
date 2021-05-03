@@ -33,6 +33,10 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails', '~> 4.0.0'
   gem 'factory_bot_rails', '~> 5.2.0'
+  gem 'capistrano'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
 end
 
 group :development do
@@ -64,3 +68,7 @@ gem 'pg', group: :production
 
 gem 'dotenv-rails'
 gem 'kaminari'
+
+group :production, :staging do
+  gem 'unicorn'
+end
