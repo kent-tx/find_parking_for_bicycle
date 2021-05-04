@@ -24,6 +24,7 @@ set :keep_releases, 5
 
 # rubyのバージョン
 set :rbenv_ruby, '2.1.3'
+set :rbenv_ruby, '2.6.6'
 
 #出力するログのレベル。
 set :log_level, :debug
