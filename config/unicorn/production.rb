@@ -3,7 +3,7 @@ $worker  = 2
 #何秒経過すればワーカーを削除するのかを決める
   $timeout = 30
 #自分のアプリケーション名、currentがつく。
-  $app_dir = "/var/www/find_parking_for_bicycle/current"
+  $app_dir = "/var/www/rails/find_parking_for_bicycle/current"
 #リクエストを受け取るポート番号を指定。
   $listen  = File.expand_path 'tmp/sockets/.unicorn.sock', $app_dir
 #PIDの管理ファイルディレクトリ

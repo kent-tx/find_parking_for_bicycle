@@ -11,7 +11,7 @@ set :repo_url, 'git@github.com:kent-tx/find_parking_for_bicycle.git'
 set :branch, 'master'
 
 # deploy先のディレクトリ。 
-set :deploy_to, '/var/www/find_parking_for_bicycle'
+set :deploy_to, '/var/www/rails/find_parking_for_bicycle'
 
 # シンボリックリンクをはるファイル。
 set :linked_files, fetch(:linked_files, []).push('config/settings.yml')
