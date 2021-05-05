@@ -29,6 +29,8 @@ set :rbenv_ruby, '2.6.6'
 #出力するログのレベル。
 set :log_level, :debug
 
+set :linked_files, %w{config/master.key}
+
 namespace :deploy do
   desc 'Restart application'
   task :restart do
