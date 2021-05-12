@@ -13,9 +13,9 @@
 
   
 # 機能
-・ログイン、ユーザー登録機能(devise)　　
+・ログイン、ユーザー登録機能(devise)  
 ・ユーザ情報変更機能  
-・post投稿、削除機能   
+・post投稿、削除機能  
 ・いいね、コメント機能(Ajax)  
 ・画像投稿機能(carrierwave,minimagick)  
 ・ページネーション(kaminari)  
